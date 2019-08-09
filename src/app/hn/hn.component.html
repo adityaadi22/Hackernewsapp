@@ -1,0 +1,68 @@
+<!----
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#hackernews">Hackernews</a></li>
+  <li><a href="#news">New</a></li>
+  <li><a href="#comments">Comments</a></li>
+  <li><a href="#ask">Ask</a></li>
+  <li><a href="#login" routerLink="/login">Login</a></li>
+</ul>
+
+</body>
+</html>-->
+
+
+    <a class="home-link" href="/">
+      
+    </a>
+    <div class="hn-text">
+      <div class="left">
+        <h1 class="name">
+          <a href="/">Hacker News</a>
+        </h1>
+        <span class="hn-nav">
+          <a routerLink="/newest/1">new</a>
+          <span class="divider">
+            |
+          </span>
+          <a routerLink="/show/1">show</a>
+          <span class="divider">
+            |
+          </span>
+          <a routerLink="/ask/1">ask</a>
+          <span class="divider">
+            |
+          </span>
+          <a routerLink="/item/id">comments</a>
+          <span class="divider">
+            | 
+          </span>
+          <a href="">jobs</a>
+        </span>
+      </div>
+      <app-stories></app-stories>
+      
+    </div>
