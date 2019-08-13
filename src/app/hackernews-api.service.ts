@@ -6,9 +6,10 @@ import { map, catchError } from "rxjs/operators";
 @Injectable()
 export class hackernewsApiService {
   baseUrl: string
-       
+  baseUrl1: string    
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://node-hnapi.herokuapp.com';
+    this.baseUrl1 ='https://jsonplaceholder.typicode.com/';
    }
    fetchStories(storyType: string, page: number): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/${storyType}?page=${page}`)
@@ -21,9 +22,10 @@ fetchItem(id: number): Observable<any> {
                   
 }
 
-fetchComments(id: number): Observable<any> {
-  return this.httpClient.get(`${this.baseUrl}/comment/${id}`)
-                 
+  fetchComments(id: number): Observable<any> {
+     return this.httpClient.get(`${this.baseUrl1}/item/${id}`)    
+  
+
 }
 
 
