@@ -13,5 +13,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Technologies used
 
-Angular 7
+Angular 7  
 Typescript
