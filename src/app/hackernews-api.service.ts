@@ -9,7 +9,7 @@ export class hackernewsApiService {
   baseUrl1: string    
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'https://node-hnapi.herokuapp.com';
-    this.baseUrl1 ='https://jsonplaceholder.typicode.com/';
+   // this.baseUrl1 ='https://jsonplaceholder.typicode.com/';
    }
    fetchStories(storyType: string, page: number): Observable<any> {
     return this.httpClient.get(`${this.baseUrl}/${storyType}?page=${page}`)
