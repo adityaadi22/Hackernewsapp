@@ -22,11 +22,9 @@ fetchItem(id: number): Observable<any> {
                   
 }
 
-  fetchComments(id: number): Observable<any> {
-     return this.httpClient.get(`${this.baseUrl1}/item/${id}`)    
   
 
-}
+
 
 
 

@@ -1,7 +1,23 @@
 
+
+
+<textarea #titleinput style = "margin-top:10px;width:200px;height:100px;" >
+</textarea><br><br>
+
+
+
+ <button type="submit" (click)='addTodo(titleinput.value)'>Submit</button>
+<button type="button" routerLink="/login" style = "margin-left:100px;">Login</button>
+
+
+ <div *ngFor = "let b of just">
+    <p style = "margin-top:40px;">{{b}}</p> 
+ </div>
+ {{just}}
+<!--->
 <div class="main-content">
     <div class="loading-section" *ngIf="!items">
-      bbb
+      
       </div>
     <div *ngIf="items" class="item">
      
@@ -30,3 +46,4 @@
       <app-comment-tree [commentTree]="items.comments"></app-comment-tree>
     </div>
   </div>
+  ---->
