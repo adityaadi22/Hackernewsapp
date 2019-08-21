@@ -13,7 +13,7 @@ const routes: Routes = [
    
   {path:'login',component:LoginComponent},
 
-  
+  //{path: item/: id'                                     },
 
   
     {path: '', redirectTo: 'news/1', pathMatch : 'full'},
@@ -23,7 +23,7 @@ const routes: Routes = [
     {path: 'show/:page', component: StoriesComponent, data: {storiesType: 'show'}},
     {path: 'ask/:page', component: StoriesComponent, data: {storiesType: 'ask'}},
     {path: 'jobs/:page', component: StoriesComponent, data: {storiesType: 'jobs'}},
-   // {path: 'item/:id', component: CommentComponent, data: {storiesType: 'comments'}},
+    {path: 'comments', component: CommentComponent, data: {CommentType: 'comments'}},
     {path: 'item/:id', component: ItemCommentsComponent}
   ];
   

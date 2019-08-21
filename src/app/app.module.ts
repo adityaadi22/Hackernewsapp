@@ -10,11 +10,12 @@ import { ItemComponent } from './item/item.component';
 import  { hackernewsApiService } from './hackernews-api.service';
 
 import { DomainPipe } from './domain.pipe';
-
+import {FormsModule}  from '@angular/forms';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
 
 import { CommentTreeComponent } from './comment-tree/comment-tree.component';
 import { CommentComponent } from './comment/comment.component';
+import { CommentserviceService } from './commentservice.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,9 @@ import { CommentComponent } from './comment/comment.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,FormsModule
   ],
-  providers:  [hackernewsApiService],
+  providers:  [hackernewsApiService,CommentserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

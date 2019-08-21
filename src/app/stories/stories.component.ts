@@ -17,7 +17,7 @@ export class StoriesComponent implements OnInit {
     items;
     storiesType;
     pageNum: number;
-    listStart: number;
+    list: number;
     
       constructor(private _hackerNewsAPIService: hackernewsApiService,
          private route: ActivatedRoute
@@ -33,7 +33,7 @@ export class StoriesComponent implements OnInit {
                               .subscribe(
                                 items => this.items = items,
                                 error => console.log('Error fetching' + this.storiesType + 'stories'),
-                                () => this.listStart = ((this.pageNum - 1) * 30) + 1);
+                                () => this.list = ((this.pageNum - 1) * 30) + 1);
     });
   }
                 

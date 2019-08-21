@@ -6,26 +6,41 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './item-comments.component.html',
   styleUrls: ['./item-comments.component.css']
 })
+
+
 export class ItemCommentsComponent implements OnInit {
   sub: any;
   item ;
   _hackernewsApiService: any;
+  just = [];
+
+   
+  Abc: string;
+ onSubmit() {
+   return this.Abc;
+ }
+
+ addTodo(title:string)
+ {
+   this.just.push (title);
+
+ }
   
   
   constructor(   private _hackerNewsAPIService: hackernewsApiService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe((param => {
-      let itemID = +param['id'];
-      this._hackernewsApiService.fetchComments(itemID).subscribe((data: any) => {
-        this.item = data;
-      }, error => console.log('Could not load item' + itemID));
-    }));
+   //this.sub = this.route.params.subscribe((param => {
+     // let itemID = +param['id'];
+      //this._hackernewsApiService.fetchComments(itemID).subscribe((data: any) => {
+       // this.item = data;
+      }//, error => console.log('Could not load item' + itemID));
+    //}));
       
     
     
-  }
+  //}
  
 
 }
