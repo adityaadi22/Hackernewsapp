@@ -1,4 +1,40 @@
-    <ul *ngFor="let item of postid" class="post">
-      <li>{{item.body}}</li>
-    </ul>
-  
+    
+<ul *ngFor="let body of postid " class="post">
+    
+      <li>
+          {{body.id}}.
+        <a href = "https://phys.org/news/2019-08-russia-fedor-humanoid-robot-space.html"></a> 
+          <a href = "https://techcrunch.com/2019/08/22/oracle-directors-give-blessing-to-shareholder-lawsuit-against-larry-ellison-and-safra-catz/"></a>
+          <a href = "https://techcrunch.com/2019/08/22/inside-the-porsche-taycans-minimalist-911-inspired-interior/"></a>
+          <a href ="https://www.thenewatlantis.com/publications/can-chess-survive-artificial-intelligence"></a>
+          <a href = "https://www.nytimes.com/2019/08/22/opinion/netflix-hulu-cable.html"></a>
+          {{body.Title}}
+        </li>
+       
+
+            <!--  <button routerLink="/item/{{body.id}}"   type="comment" (click)="m1(body.id)">comment</button>--->
+            <button  routerLink="/item/{{body.id}}"  ><span (click)="fetchCommentsbasedonNewsId(body.id)">comments{{commentcounter}}</span></button>
+            <div *ngIf="isEmptyComment(body.comment);
+             else hasComments"> 
+              <div>
+              <!---> 
+              </div>
+            <app-item-comments  [datavalue]="newssid"></app-item-comments>
+              </div>
+            -->
+          
+       
+      
+   
+    <!---- <app-item-comments [nID]="newssid" ></app-item-comments>
+
+
+     <ng-template #hasComments>
+      <div *ngFor="let comment of commentslist">
+        <div>{{comments}}</div>
+       
+      </div>
+    </ng-template>
+  </li>
+</ul>---->
+    

@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
-import { hackernewsApiService } from '../hackernews-api.service';
+import { CommentserviceService } from '../commentservice.service';
+//import { hackernewsApiService } from '../hackernews-api.service';
 @Component({
   selector: 'item',
   templateUrl: './item.component.html',
@@ -8,7 +9,7 @@ import { hackernewsApiService } from '../hackernews-api.service';
 export class ItemComponent implements OnInit {
   @Input()
   item;
-  constructor() { }
+  constructor(private CommentserviceService: CommentserviceService) { }
 
   ngOnInit() {
     
